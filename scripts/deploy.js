@@ -7,10 +7,8 @@
 const hre = require("hardhat");
 
 async function main() {
-  
-
   const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy();
+  const greeter = await Greeter.deploy("Hello this is Greeting contract");
 
   await greeter.deployed();
 
